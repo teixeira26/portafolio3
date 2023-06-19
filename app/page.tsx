@@ -10,6 +10,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+const localUrl = process.env.NEXT_PUBLIC_BACKEND_URL
 
 export default function Home() {
   const [initialPage, setInitialPage]:any = useState();
@@ -19,11 +20,11 @@ export default function Home() {
     const [abouts, setAbouts]:any = useState();
 
   useEffect(()=>{
-    fetch('http://localhost:1337/api/initial-pages').then(e=>e.json()).then((e)=>setInitialPage(e))
-    fetch('http://localhost:1337/api/skills?populate=deep').then(e=>e.json()).then((e)=>setSkills(e))
-    fetch('http://localhost:1337/api/projects?populate=deep').then(e=>e.json()).then((e)=>setProjects(e))
-    fetch('http://localhost:1337/api/experiences?populate=deep').then(e=>e.json()).then((e)=>setExperiences(e))
-    fetch('http://localhost:1337/api/abouts?populate=deep').then(e=>e.json()).then((e)=>setAbouts(e))
+    fetch(`${localUrl}/api/initial-pages`).then(e=>e.json()).then((e)=>setInitialPage(e))
+    fetch(`${localUrl}/api/skills?populate=deep`).then(e=>e.json()).then((e)=>setSkills(e))
+    fetch(`${localUrl}/api/projects?populate=deep`).then(e=>e.json()).then((e)=>setProjects(e))
+    fetch(`${localUrl}/api/experiences?populate=deep`).then(e=>e.json()).then((e)=>setExperiences(e))
+    fetch(`${localUrl}/api/abouts?populate=deep`).then(e=>e.json()).then((e)=>setAbouts(e))
 
   },[])
 
