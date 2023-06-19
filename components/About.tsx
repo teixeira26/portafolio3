@@ -37,11 +37,10 @@ export default function About({ title, text, icons }: Props) {
             {title}
           </h3>
           <div className="flex w-[100%] h-[80%] justify-center flex-wrap">
-            {icons?.map(icon=>{
-              console.log(icon)
+            {icons?.map((icon:any, index:number)=>{
               return(
-                <div className='min-w-[150px] w-[40%] flex-col gap-5 flex justify-center items-center h-[40%]'>
-                <img className={"invert w-10 md:w-20"} src={`${localUrl}${icon.attributes.Icon.data.attributes.url}`} alt="" />
+                <div key={index} className='min-w-[150px] w-[40%] flex-col gap-5 flex justify-center items-center h-[40%]'>
+                <img className={"invert w-10 md:w-20"} src={`${localUrl}${icon.attributes.Icon.data.attributes.url}`} alt="iconImage" />
                 <p className="px-4 text-center">{icon.attributes.description}</p>
               </div>
               )

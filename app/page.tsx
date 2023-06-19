@@ -12,11 +12,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [initialPage, setInitialPage] = useState();
-  const [skills, setSkills] = useState();
-  const [projects, setProjects] = useState();
-  const [experiences, setExperiences] = useState();
-    const [abouts, setAbouts] = useState();
+  const [initialPage, setInitialPage]:any = useState();
+  const [skills, setSkills]:any = useState();
+  const [projects, setProjects]:any = useState();
+  const [experiences, setExperiences]:any = useState();
+    const [abouts, setAbouts]:any = useState();
 
   useEffect(()=>{
     fetch('http://localhost:1337/api/initial-pages').then(e=>e.json()).then((e)=>setInitialPage(e))

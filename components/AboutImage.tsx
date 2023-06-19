@@ -9,7 +9,7 @@ import charlesDarwin from "../public/charlesDarwin.jpeg";
 import books from "../public/books.jpeg";
 import food from "../public/food.jpeg";
 import cleaning from "../public/cleaning.webp";
-import DivParallax from "./DivParallax";
+
 type Props = {}
 
 export default function AboutImage({}: Props) {

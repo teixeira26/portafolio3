@@ -25,7 +25,7 @@ export default function Skills({title, subtitle, images}: Props) {
         </div>
         
         <div className='mt-12 grid grid-cols-3 gap-5'>
-          {images?.data.map((image, index)=>{
+          {images?.data.map((image:any, index:number)=>{
               if(index < 3 || (index > 5 && index < 9) )return <SkillCard url={image.attributes.Image.data.attributes.url} name={image.attributes.Name} key={index}/>
               else return <SkillCard directionLeft={true} url={image.attributes.Image.data.attributes.url} name={image.attributes.Name} key={index} />
             

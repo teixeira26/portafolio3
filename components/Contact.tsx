@@ -20,7 +20,7 @@ interface Props{
 }
 export default function Contact({mail, adress, phone, title, placeholders, subTitle, callToAction}:Props) {
   const { register, handleSubmit } = useForm();
-  const onSubmit:SubmitHandler<Inputs> = (formData) => window.location.href = `mailto:matheus.teixeira.dev@gmail.com?subject=${formData.subject}&body=Hi, my name is${formData.name}. ${formData.message} ${formData.email}`;
+  const onSubmit:any = (formData:any) => window.location.href = `mailto:matheus.teixeira.dev@gmail.com?subject=${formData.subject}&body=Hi, my name is${formData.name}. ${formData.message} ${formData.email}`;
   return (
     <div className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute text-gray-500 mb-10 top-16 md:top-24 tracking-[20px] uppercase text-[12px] md:text-2xl ">

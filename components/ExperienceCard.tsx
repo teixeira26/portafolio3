@@ -10,7 +10,8 @@ type Props = {
     endDate:string,
     summaryPoints:Array<string>
     icons:Array<any>,
-    image:string,
+    image:any,
+    index:number
 }
 
 export default function ExperienceCard({title, companyName, startDate, endDate, summaryPoints, icons, image, index}: Props) {
