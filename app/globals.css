@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.hexagon{
+  clip-path: polygon(27% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  rotate:90deg  ;
+
+}
+
+.hexagonImg{
+  transform: rotate(-90deg);
+  object-fit: cover;
+  filter: grayscale(80%);
+
+}
+
+.contactInput{
+  @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
+}
+

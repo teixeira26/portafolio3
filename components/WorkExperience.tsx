@@ -1,0 +1,37 @@
+"use client"
+
+import React from 'react'
+import {motion} from 'framer-motion'
+import ExperienceCard from './ExperienceCard'
+
+type Props = {
+    sectionTitle:string
+    experiences:Array<any>
+}
+
+export default function WorkExperience({sectionTitle, experiences}: Props) {
+  return (
+    <motion.div
+    initial={{  
+        opacity:0,
+    }}
+    whileInView={{
+        opacity:1,
+    }}
+    transition={{
+        duration:1.5
+    }}
+    className='h-screen flex relative overflow-hidden flex-col text-left md:flex-rol max-w-full px-0 md:px-10 justify-evenly mx-auto items-center'>
+        <h3 className="absolute text-gray-500 mb-10 top-16 md:top-24 tracking-[20px] uppercase text-[12px] md:text-2xl ">{sectionTitle}</h3>
+        <div className='w-full xl:mt-5 sm:mt-20 flex space-x-5 overflow-x-scroll scroll-smooth hover:scroll-auto p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 z-10 '>
+            {
+                experiences?.map((experience, index)=>{
+                    return <ExperienceCard summaryPoints={experience.attributes.summaryPoints.points} image={experience.attributes.image.data[0].attributes} icons={experience.attributes.techSkillsIcons.data} key={index} title={experience.attributes.Title} companyName={experience.attributes.companyName} startDate={experience.attributes.startedDate} endDate={experience.attributes.FinishDate} />
+
+                })
+            }
+
+        </div>
+    </motion.div>
+  )
+}

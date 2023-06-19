@@ -1,0 +1,55 @@
+"use client";
+import React from "react";
+const localUrl = process.env.NEXT_PUBLIC_BACKEND_URL
+import { motion, useScroll, useTransform } from "framer-motion";
+
+import login from "../public/login.png";
+import heart from "../public/heart.png";
+import quality from "../public/quality.png";
+import responsive from "../public/educational-programs.png";
+import AboutImage from "./AboutImage";
+
+type Props = {
+  title: string;
+  text: string;
+  icons:any;
+};
+
+export default function About({ title, text, icons }: Props) {
+  console.log(icons)
+  return (
+    <div className="h-screen w-full flex items-center justify-start">
+      <AboutImage />
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+        className="relative w-full lg:w-[50%] p-0 h-full rounded-md"
+      >
+        <div className="flex flex-col h-full overflow-y-hidden justify-center items-center p-10">
+          <h3 className="absolute text-gray-500 mb-10 top-16 md:top-24 tracking-[20px] uppercase text-[12px] md:text-2xl">
+            {title}
+          </h3>
+          <div className="flex w-[100%] h-[80%] justify-center flex-wrap">
+            {icons?.map(icon=>{
+              console.log(icon)
+              return(
+                <div className='min-w-[150px] w-[40%] flex-col gap-5 flex justify-center items-center h-[40%]'>
+                <img className={"invert w-10 md:w-20"} src={`${localUrl}${icon.attributes.Icon.data.attributes.url}`} alt="" />
+                <p className="px-4 text-center">{icon.attributes.description}</p>
+              </div>
+              )
+            })}
+       
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
