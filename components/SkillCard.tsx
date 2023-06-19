@@ -22,6 +22,7 @@ export default function SkillCard( props:Props ) {
             opacity:1,
             x:0
         }}
+        viewport={{once:true}}
         className='rounded-full border border-gray-500 object-cover w-14 md:w-20 xl:w-24 filter group-hover:grayscale transition duration-300 ease-in-out'
         src={`${localUrl}${props.url}`}
         ></motion.img>
