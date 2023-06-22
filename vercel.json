@@ -1,0 +1,8 @@
+{
+    "crons": [
+      {
+        "path": "https://backend-portafolio2.onrender.com/api/initial-pages",
+        "schedule": "*/1 * * * *"
+      }
+    ]
+  }
