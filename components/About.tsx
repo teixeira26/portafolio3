@@ -33,10 +33,10 @@ export default function About({ title, text, icons }: Props) {
         className="relative w-full lg:w-[50%] p-0 h-full rounded-md"
       >
         <div className="flex flex-col h-full overflow-y-hidden justify-center items-center p-10">
-          <h3 className="absolute text-gray-500 mb-10 top-16 md:top-24 tracking-[20px] uppercase text-[12px] md:text-2xl">
+          <h3 className=" text-gray-500 mb-10 tracking-[20px] uppercase text-[12px] md:text-2xl text-center">
             {title}
           </h3>
-          <div className="flex w-[100%] h-[80%] justify-center flex-wrap">
+          <div className="flex w-[100%] h-[80%] justify-center items-center flex-wrap">
             {icons?.map((icon:any, index:number)=>{
               return(
                 <div key={index} className='min-w-[150px] w-[40%] flex-col gap-5 flex justify-center items-center h-[40%]'>

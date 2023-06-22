@@ -39,7 +39,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-800 via-gray-900 to-black h-screen w-full overflow-x-hidden overflow-y-scroll text-white z-0 px-5 snap-mandatory snap-y scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black h-screen w-full overflow-x-hidden overflow-y-scroll text-white z-0 px-5 snap-mandatory snap-y scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       {loading && (
         <div className="w-full h-full flex justify-center items-center">
           <img
