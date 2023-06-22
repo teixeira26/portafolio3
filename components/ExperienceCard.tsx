@@ -35,7 +35,7 @@ export default function ExperienceCard({title, companyName, startDate, endDate, 
         viewport={{
             once:true
         }}
-        className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-contain object-center' src={`${localUrl}${image.url}`} alt='image'></motion.img>
+        className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-contain object-center' src={`${image.url}`} alt='image'></motion.img>
         <div className='px-4 md:px:10 w-full'>
             <h4 className='text-2xl md:text-4xl font-light w-full'>{title}</h4>
             <p className='font-bold text-md md:text-2xl mt-1'>{companyName}</p>
@@ -46,7 +46,7 @@ export default function ExperienceCard({title, companyName, startDate, endDate, 
                         key={index}
                         alt='image'
                         className='h-10 w-10 rounded-full'
-                        src={`${localUrl}${icon.attributes.url}`}></img>
+                        src={`${icon.attributes.url}`}></img>
                     )
                 })}
             </div>

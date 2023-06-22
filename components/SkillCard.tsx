@@ -12,7 +12,7 @@ export default function SkillCard( props:Props ) {
     <div className='group reative flex cursor-pointer'>
         <img
         className='rounded-full border border-gray-500 object-cover w-14 md:w-20 xl:w-24 filter group-hover:grayscale transition duration-300 ease-in-out'
-        src={`${localUrl}${props.url}`}
+        src={`${props.url}`}
         ></img>
         <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300 linear group-hover:bg-white h-14 w-14 md:w-20 md:h-20 xl:w-24 xl:h-24 rounded-full z-0'>
             <div className={'flex items-center justify-center h-full'}>

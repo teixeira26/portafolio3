@@ -30,7 +30,7 @@ export default function Projects({sectionTitle, projects}: Props) {
               return(
                 <div key={index} className="w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                 <img
-                src={`${localUrl}${project.attributes.image.data[0].attributes.url}`}
+                src={`${project.attributes.image.data[0].attributes.url}`}
                 className="w-[60%]"/>
                 <div className="space-y-10 px-0 md:px-10 max-w-6xl">
                   <h4 className=" text-xl md:text-4xl font-semibold text-center">
