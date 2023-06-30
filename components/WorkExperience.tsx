@@ -10,6 +10,7 @@ type Props = {
 }
 
 export default function WorkExperience({sectionTitle, experiences}: Props) {
+    console.log(experiences)
   return (
     <motion.div
     initial={{  
@@ -25,7 +26,7 @@ export default function WorkExperience({sectionTitle, experiences}: Props) {
         <h3 className="absolute text-gray-500 mb-10 top-16 md:top-24 tracking-[20px] uppercase text-[12px] md:text-2xl ">{sectionTitle}</h3>
         <div className='w-full xl:mt-5 sm:mt-20 flex space-x-5 overflow-x-scroll scroll-smooth hover:scroll-auto p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 z-10 '>
             {
-                experiences?.map((experience, index)=>{ 
+                experiences?.sort((x, y)=> x.attributes.order - y.attributes.order).map((experience, index)=>{ 
                     return <ExperienceCard index={index} summaryPoints={experience.attributes.summaryPoints.points} image={experience.attributes.image.data[0].attributes} icons={experience.attributes.techSkillsIcons.data} key={index} title={experience.attributes.Title} companyName={experience.attributes.companyName} startDate={experience.attributes.startedDate} endDate={experience.attributes.FinishDate} />
 
                 })

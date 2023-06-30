@@ -26,7 +26,7 @@ export default function Projects({sectionTitle, projects}: Props) {
         {sectionTitle}
       </h3>
         <div className='relative h-[100%] w-[100%] flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-            {projects?.map((project, index)=>{
+            {projects?.sort((x, y)=> x.attributes.order - y.attributes.order).map((project, index)=>{
               return(
                 <div key={index} className="w-full flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-10 md:p-44 h-screen">
                 <img
