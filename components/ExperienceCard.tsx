@@ -15,7 +15,6 @@ type Props = {
 }
 
 export default function ExperienceCard({title, companyName, startDate, endDate, summaryPoints, icons, image, index}: Props) {
-    const {t, setLocale} = useT();
   return (
     <article key={index} className=' py-3 flex flex-col rounded-lg xl:mt-0 md:mt-10 mt-8 items-center sm:space-y-4 space-y-1 flex-shrink-0 h-[500px] lg:h-auto w-[300px] md:w-[400px] lg:w-[500px] xl:w-[520px] snap-center bg-[#292929] p-1 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-x-hidden scrollbar scrollbar-track-gray-800/20 scrollbar-thumb-gray-400/20'>
         <motion.img 
@@ -50,7 +49,7 @@ export default function ExperienceCard({title, companyName, startDate, endDate, 
                     )
                 })}
             </div>
-            <p className=' py-5 text-gray-300 '>{t.from} {startDate} - {t.to} {endDate ?? <span className=''>{t.present}</span>}</p>
+            <p className=' py-5 text-gray-300 '>Desde {startDate} - Hasta {endDate ?? <span className=''>Presente</span>}</p>
         
             <ul className='list-disc space-y-4 ml-5   text-md'>
                 {summaryPoints?.map((point, index)=> <li key={index}>{point}</li>)}

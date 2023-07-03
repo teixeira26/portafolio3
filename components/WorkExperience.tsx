@@ -10,7 +10,6 @@ type Props = {
 }
 
 export default function WorkExperience({sectionTitle, experiences}: Props) {
-    console.log(experiences)
   return (
     <motion.div
     initial={{  
