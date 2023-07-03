@@ -120,13 +120,13 @@ export default function Home() {
               experiences={experiencesSelected?.data}
             />
           </section>
-          <section className="snap-start" id="skills">
+         {skillsSelected && skillsSelected.data[0] && <section className="snap-start" id="skills">
             <Skills
               title={skillsSelected.data[0].attributes.title}
               subtitle={skillsSelected.data[0].attributes.subtitle}
               images={skillsSelected.data[0].attributes.skill_images}
             />
-          </section>
+          </section>}
        <section className="snap-start" id="projects">
             <Projects
               sectionTitle={
