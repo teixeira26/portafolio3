@@ -56,20 +56,20 @@ export default function Home() {
 
   useMemo(()=>{
     if(initials){
-      setInitialsSelected(initials.data[0].attributes.initialLanguages.find((language)=> language.locale === locale))      
+      setInitialsSelected(initials.data[0].attributes.initialLanguages.find((language:any)=> language.locale === locale))      
     }
     if(experiences) setExperiencesSelected({data: experiences.data.map((experience:any, index:number)=> {
-      const language = experience.attributes.experienceLanguages.find(el=>el.locale === locale);
+      const language = experience.attributes.experienceLanguages.find((el:any)=>el.locale === locale);
       return{...experience, attributes:{...experience.attributes,  Title:language.Title, summaryPoints: language.summaryPoints}}
     })})
 
     if(skills) setSkillsSelected({data: skills.data.map((skill:any, index:number)=> {
-      const language = skill.attributes.skillLanguages.find(el=>el.locale === locale);
+      const language = skill.attributes.skillLanguages.find((el:any)=>el.locale === locale);
       return{...skill, attributes:{...skill.attributes,  subtitle:language.subtitle, title: language.title}}
     })})
 
     if(projects) setProjectsSelected({data: projects.data.map((project:any, index:number)=> {
-      const language = project.attributes.projectLanguages.find(el=>el.locale === locale);
+      const language = project.attributes.projectLanguages.find((el:any)=>el.locale === locale);
       return{...project, attributes:{...project.attributes,  description:language.description, title: language.title}}
     })})
   }, [locale, initials, experiences, skills, projects])
@@ -108,7 +108,7 @@ export default function Home() {
               locale={locale}
               icons={abouts?.data}
               text={initialsSelected.About.text}
-              languages={abouts?.data.map(el=>el.attributes.about)}
+              languages={abouts?.data.map((el:any)=>el.attributes.about)}
               title={initialsSelected.About.title}
             />
           </section>

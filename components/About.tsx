@@ -15,9 +15,9 @@ type Props = {
 };
 
 export default function About({ title, text, icons, languages, locale }: Props) {
-  let [description, setDescription] = useState()
+  let [description, setDescription]:any[] = useState()
   useEffect(()=>{
-    if(icons)setDescription(icons.map(el=>el.attributes.about.find(language=>language.locale === locale)))
+    if(icons)setDescription(icons.map((el:any)=>el.attributes.about.find((language:any)=>language.locale === locale)))
 
   }, [icons, locale])
 
@@ -47,7 +47,7 @@ export default function About({ title, text, icons, languages, locale }: Props) 
               return(
                 <div key={index} className='min-w-[250px] w-[40%] flex-col gap-5 flex justify-center items-center'>
                 <img className={"invert w-10 md:w-20"} src={`${icon.attributes.Icon.data.attributes.url}`} alt="iconImage" />
-                <p className="px-4 text-center">{description[index].description}</p>
+                <p className="px-4 text-center">{description && description[index].description}</p>
               </div>
               )
             })}
