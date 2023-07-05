@@ -37,6 +37,9 @@ export default function Projects({sectionTitle, projects}: Props) {
                     <span className="underline decoration-[#F7AB0A]/50 ">Proyecto {index + 1} de {projects.length}:</span> {project.attributes.title}</h4>
                 </div>
                 <p className="text-sm md:text-ls text-center">{project.attributes.description}</p>
+                <a target="_blank" className="cursor-pointer px-6 py-2 border hover:border-[#242424] rounded-full uppercase text-xs tracking-eidest hover:text-gray-500 transition-all hover:text-[#f7ab0a]/40 border-[#f7ab0a]" href={project.attributes.url}>
+                  <p>Ver más</p>
+                  </a>
               </div>
               )
             })}
