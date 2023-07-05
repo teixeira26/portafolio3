@@ -11,7 +11,7 @@ import pt from '../locales/pt'
 type Props = {
     sectionTitle:string
     experiences:Array<any>
-    locale: string
+    locale: 'es' | 'pt' | 'en'
 }
 
 export default function WorkExperience({sectionTitle, experiences, locale}: Props) {

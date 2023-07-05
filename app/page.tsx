@@ -13,6 +13,7 @@ const localUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 import { useEffect, useState, useMemo } from "react";
 import useT from "@/components/t";
 
+
 export default function Home() {
   const [skills, setSkills]: any = useState();
   const [skillsSelected, setSkillsSelected]: any = useState();

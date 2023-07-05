@@ -1,12 +1,11 @@
 'use client'
-import { useState } from 'react'
-import en from '../locales/en'
-import es from '../locales/es'
-import pt from '../locales/pt'
+import { Dispatch, SetStateAction, useState } from 'react'
+
+
 
 const useT = ()=>{
-    const [locale, setLocale] = useState('es')
-    const setT = (t:string)=>{
+    const [locale, setLocale]:["es" | 'pt' | 'en', Dispatch<SetStateAction<any>>] = useState('es')
+    const setT = (t:'es' | 'pt' | 'en')=>{
         setLocale(t === 'en' ? 'en' : t === 'es' ? 'es' : 'pt')
     }
     return { locale, setT, setLocale }
