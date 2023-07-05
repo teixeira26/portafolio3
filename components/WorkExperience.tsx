@@ -20,7 +20,6 @@ export default function WorkExperience({sectionTitle, experiences, locale}: Prop
         es: es,
         pt: pt
     }
-    console.log(en, locale)
   return (
     <motion.div
     initial={{  
