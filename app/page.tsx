@@ -118,6 +118,7 @@ export default function Home() {
                 initialsSelected.hero.sectionNames[1]
               }
               experiences={experiencesSelected?.data}
+              locale={locale}
             />
           </section>
          {skillsSelected && skillsSelected.data[0] && <section className="snap-start" id="skills">
