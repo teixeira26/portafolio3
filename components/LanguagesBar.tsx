@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
-import portugueseFlag from '../public/brazil-.png'
-import spanishFlag from '../public/flag.png'
-import ensglishFlag from '../public/united-kingdom.png'
-import useT from './t'
+import portugueseFlag from '../public/brazil-.webp'
+import spanishFlag from '../public/flag.webp'
+import ensglishFlag from '../public/united-kingdom.webp'
 type Props = {setT:any}
 
 export default function LanguagesBar({setT}: Props) {

@@ -2,8 +2,7 @@
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircle from "./BackgroundCircle";
-import image from "../public/image.png";
-import Image from "next/image";
+import image from "../public/image.webp";
 
 type Props = {
   wordsTypeWriter:Array<string>,
